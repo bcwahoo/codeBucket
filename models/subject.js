@@ -5,7 +5,6 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     }
   });
-<<<<<<< HEAD
   Subject.associate = function(models) {
     // Associating Subject with Posts
     // When an Subject is deleted, also delete any associated Posts
@@ -22,7 +21,5 @@ module.exports = function(sequelize, DataTypes) {
       }
     });
   };
-=======
->>>>>>> ed895995828ddfbd5ab61418d2e2e069fcbc5c62
   return Subject;
 };
