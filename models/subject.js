@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
   Subject.associate = function(models) {
     // We're saying that a Subject should belong to an Author
     // A Subject can't be created without an Author due to the foreign key constraint
-    Subject.belongsTo(models.Subject, {
+    Subject.belongsTo(models.Topic, {
       foreignKey: {
         allowNull: false
       }
