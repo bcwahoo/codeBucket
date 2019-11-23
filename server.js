@@ -25,8 +25,12 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
+<<<<<<< HEAD
 //Here to reset DB - change force to true to delete then back to false after creating new tables
 var syncOptions = { force: false };
+=======
+var syncOptions = { force: true, pool: false };
+>>>>>>> ed895995828ddfbd5ab61418d2e2e069fcbc5c62
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

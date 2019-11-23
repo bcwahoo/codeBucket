@@ -5,22 +5,13 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true
     },
     cardFront: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true
     },
     cardBack: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: true
     }
   });
-  Card.associate = function(models) {
-    // We're saying that a Card should belong to an Author
-    // A Card can't be created without an Author due to the foreign key constraint
-    Card.belongsTo(models.Subject, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
   return Card;
 };
