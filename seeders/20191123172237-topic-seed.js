@@ -27,6 +27,11 @@ module.exports = {
         subjectList: "Timers",
         createdAt: new Date(),
         updatedAt: new Date()
+      },
+      {
+        subjectList: "Ajax",
+        createdAt: new Date(),
+        updatedAt: new Date()
       }
     ]);
   },
