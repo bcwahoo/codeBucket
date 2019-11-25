@@ -16,14 +16,14 @@ module.exports = function(app) {
     }
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", async (req, res) => {
+  // Load card page and pass in an card by id
+  app.get("/card/:id", async (req, res) => {
     try {
-      const dbExample = await db.Example.findOne({
+      const dbCard = await db.Card.findOne({
         where: { id: req.params.id }
       });
-      res.render("example", {
-        example: dbExample
+      res.render("card", {
+        card: dbCard
       });
     } catch (error) {
       res

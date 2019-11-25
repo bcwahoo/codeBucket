@@ -6,6 +6,17 @@
     <!-- Search form -->
     <input class="form-control col-8 mx-auto" type="text" placeholder="Search codeBucket" aria-label="Search">
   </div>
+  <div class="row">
+    <h3>Topics</h3>
+    <ul id="topic-list" class="list-group">
+      {{#each Topics}}
+      <li data-id="{{this.id}}" class="list-group-item">
+        <a href="topic/{{this.id}}">{{this.topicName}}</a>
+        <button class="btn btn-danger float-right delete">ｘ</button>
+      </li>
+      {{/each}}
+    </ul>
+  </div>
 
 
 </div>

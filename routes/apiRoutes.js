@@ -1,10 +1,10 @@
 var db = require("../models");
 
 module.exports = function(app) {
-  // Get all topics
-  app.get("/api/topics", async (req, res) => {
+  // Get all cards
+  app.get("/api/card", async (req, res) => {
     try {
-      const data = await db.Topic.findAll({});
+      const data = await db.Card.findAll({});
       res.json(data);
     } catch (error) {
       res.status(400).json({ error: { name: error.name, msg: error.message } });
