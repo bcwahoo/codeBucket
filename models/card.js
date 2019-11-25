@@ -4,11 +4,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    cardFront: {
+    cardDef: {
       type: DataTypes.TEXT,
       allowNull: true
     },
-    cardBack: {
+    cardExample: {
       type: DataTypes.TEXT,
       allowNull: true
     }
