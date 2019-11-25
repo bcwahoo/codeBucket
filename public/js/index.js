@@ -5,7 +5,7 @@ var $cardExample = $("#card-example");
 var $cardTopic = $("#card-topic");
 var $cardSubject = $("#card-subject");
 var $submitBtn = $("#submit");
-var $exampleList = $("#example-list");
+var $topicList = $("#topic-list");
 var $subjectList = $("#subject-list");
 var $cardList = $("#card-list");
 
@@ -21,16 +21,28 @@ var API = {
       data: JSON.stringify(card)
     });
   },
-  getCards: function() {
+  getCard: function() {
     return $.ajax({
       url: "api/cards",
       type: "GET",
     });
   },
-  deleteCards: function(id) {
+  deleteCard: function(id) {
     return $.ajax({
       url: "api/cards/" + id,
       type: "DELETE",
+    });
+  },
+  getTopic: function() {
+    return $.ajax({
+      url: "api/topics",
+      type: "GET",
+    });
+  },
+  getSubject: function() {
+    return $.ajax({
+      url: "api/subjects",
+      type: "GET",
     });
   }
 };
@@ -38,15 +50,15 @@ var API = {
 // refreshCards gets new cards from the db and repopulates the list
 var refreshCards = function() {
   API.getCards().then(function(data) {
-    var $examples = data.map(function(example) {
+    var $cards = data.map(function(card) {
       var $a = $("<a>")
-        .text(example.text)
-        .attr("href", "/example/" + example.id);
+        .text(card.cardName)
+        .attr("href", "/card/" + card.id);
 
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id,
+          "data-id": card.id,
         })
         .append($a);
 
@@ -59,8 +71,66 @@ var refreshCards = function() {
       return $li;
     });
 
-    $exampleList.empty();
-    $exampleList.append($examples);
+    $cardList.empty();
+    $cardList.append($cards);
+  });
+};
+
+// refreshTopic gets new cards from the db and repopulates the list
+var refreshTopic = function() {
+  API.getTopic().then(function(data) {
+    var $topics = data.map(function(topic) {
+      var $a = $("<a>")
+        .text(topic.topicName)
+        .attr("href", "/topic/" + topic.id);
+
+      var $li = $("<li>")
+        .attr({
+          class: "list-group-item",
+          "data-id": topic.id,
+        })
+        .append($a);
+
+      var $button = $("<button>")
+        .addClass("btn btn-danger float-right delete")
+        .text("ｘ");
+
+      $li.append($button);
+
+      return $li;
+    });
+
+    $topicList.empty();
+    $topicList.append($topics);
+  });
+};
+
+// refreshSubject gets new cards from the db and repopulates the list
+var refreshSubject = function() {
+  API.getCards().then(function(data) {
+    var $subjects = data.map(function(subject) {
+      var $a = $("<a>")
+        .text(subject.subjectName)
+        .attr("href", "/subject/" + subject.id);
+
+      var $li = $("<li>")
+        .attr({
+          class: "list-group-item",
+          "data-id": subject.id,
+        })
+        .append($a);
+
+      var $button = $("<button>")
+        .addClass("btn btn-danger float-right delete")
+        .text("ｘ");
+
+      $li.append($button);
+
+      return $li;
+    });
+
+    $subjectList.empty();
+    $subjectList.append($subjects);
   });
 };
 
@@ -69,18 +139,29 @@ var refreshCards = function() {
 var handleFormSubmit = function(event) {
   event.preventDefault();
 
-  var example = {
-    name: $cardName.val().trim(),
-    definition: $cardDef.val().trim()
+  var card = {
+    cardName: $cardName.val().trim(),
+    definition: $cardDef.val().trim(),
+    example: $cardExample.val().trim(),
+    topic: $cardTopic.val().trim(),
+    subject: $cardSubject.val().trim()
   };
 
-  if (!(example.text && example.description)) {
+  if (
+    !(
+      card.cardName &&
+      card.definition &&
+      card.example &&
+      card.topic &&
+      card.subject
+    )
+  ) {
     alert("You must enter an example text and description!");
     return;
   }
 
-  API.saveExample(example).then(function() {
-    refreshExamples();
+  API.saveCard(card).then(function() {
+    refreshCard();
   });
 
   $cardName.val("");
