@@ -1,3 +1,25 @@
-.list-group-item {
-  line-height: 2.5;
+/* button,
+div,
+form,
+input {
+  margin: 10px;
+} */
+
+body {
+  background-image: url('../img/background.jpg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #464646;
+}
+
+.top-container {
+  width: 80%;
+  margin: 10%;
+  padding: 20px;
+  box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+  background-color: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(5px);
 }
