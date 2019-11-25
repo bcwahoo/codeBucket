@@ -4,32 +4,32 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert("Topics", [
       {
-        subjectList: "HTML",
+        topicName: "HTML",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectList: "CSS",
+        topicName: "CSS",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectList: "JavaScript",
+        topicName: "JavaScript",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectList: "JQuery",
+        topicName: "JQuery",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectList: "Timers",
+        topicName: "Timers",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectList: "Ajax",
+        topicName: "Ajax",
         createdAt: new Date(),
         updatedAt: new Date()
       }
