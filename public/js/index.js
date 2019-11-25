@@ -1,38 +1,43 @@
 // Get references to page elements
-var $exampleText = $("#example-text");
-var $exampleDescription = $("#example-description");
+var $cardName = $("#card-name");
+var $cardDef = $("#card-def");
+var $cardExample = $("#card-example");
+var $cardTopic = $("#card-topic");
+var $cardSubject = $("#card-subject");
 var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
+var $subjectList = $("#subject-list");
+var $cardList = $("#card-list");
 
 // The API object contains methods for each kind of request we'll make
 var API = {
-  saveExample: function(example) {
+  saveCard: function(card) {
     return $.ajax({
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
       },
       type: "POST",
-      url: "api/examples",
-      data: JSON.stringify(example)
+      url: "api/cards",
+      data: JSON.stringify(card)
     });
   },
-  getExamples: function() {
+  getCards: function() {
     return $.ajax({
-      url: "api/examples",
-      type: "GET"
+      url: "api/cards",
+      type: "GET",
     });
   },
-  deleteExample: function(id) {
+  deleteCards: function(id) {
     return $.ajax({
-      url: "api/examples/" + id,
-      type: "DELETE"
+      url: "api/cards/" + id,
+      type: "DELETE",
     });
   }
 };
 
-// refreshExamples gets new examples from the db and repopulates the list
-var refreshExamples = function() {
-  API.getExamples().then(function(data) {
+// refreshCards gets new cards from the db and repopulates the list
+var refreshCards = function() {
+  API.getCards().then(function(data) {
     var $examples = data.map(function(example) {
       var $a = $("<a>")
         .text(example.text)
@@ -41,7 +46,7 @@ var refreshExamples = function() {
       var $li = $("<li>")
         .attr({
           class: "list-group-item",
-          "data-id": example.id
+          "data-id": example.id,
         })
         .append($a);
 
@@ -65,8 +70,8 @@ var handleFormSubmit = function(event) {
   event.preventDefault();
 
   var example = {
-    text: $exampleText.val().trim(),
-    description: $exampleDescription.val().trim()
+    name: $cardName.val().trim(),
+    definition: $cardDef.val().trim()
   };
 
   if (!(example.text && example.description)) {
@@ -78,8 +83,8 @@ var handleFormSubmit = function(event) {
     refreshExamples();
   });
 
-  $exampleText.val("");
-  $exampleDescription.val("");
+  $cardName.val("");
+  $cardDef.val("");
 };
 
 // handleDeleteBtnClick is called when an example's delete button is clicked

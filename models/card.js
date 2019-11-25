@@ -4,11 +4,11 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: true
     },
-    cardDef: {
+    defintion: {
       type: DataTypes.TEXT,
       allowNull: true
     },
-    cardExample: {
+    example: {
       type: DataTypes.TEXT,
       allowNull: true
     }
