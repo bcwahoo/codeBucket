@@ -4,10 +4,10 @@ module.exports = function(app) {
   // Load index page
   app.get("/", async (req, res) => {
     try {
-      const dbExamples = await db.Example.findAll({});
+      const dbTopic = await db.Topic.findAll({});
       res.render("index", {
-        msg: "Welcome!",
-        examples: dbExamples
+        msg: "Welcome To codeBucket!",
+        topic: dbTopic
       });
     } catch (error) {
       res
