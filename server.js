@@ -24,8 +24,8 @@ app.set("view engine", "handlebars");
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
-
-var syncOptions = { force: true, pool: false };
+// only run when testing server
+//var syncOptions = { force: true, pool: false };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
@@ -34,8 +34,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function () {
-  app.listen(PORT, function () {
+db.sequelize.sync(syncOptions).then(function() {
+  app.listen(PORT, function() {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
@@ -43,10 +43,5 @@ db.sequelize.sync(syncOptions).then(function () {
     );
   });
 });
-
-// // Starts our server.
-// server.listen(PORT, function () {
-//   console.log("Server is listening on PORT: " + PORT);
-// });
 
 module.exports = app;
