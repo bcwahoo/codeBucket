@@ -4,82 +4,82 @@ module.exports = {
   up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert("Subjects", [
       {
-        subjectName: "What is HTML?",
+        subjectList: "What is HTML?",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "HTML Elements",
+        subjectList: "HTML Elements",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "HTML Forms",
+        subjectList: "HTML Forms",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "HTML Comments",
+        subjectList: "HTML Comments",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "What is CSS?",
+        subjectList: "What is CSS?",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "CSS Selectors",
+        subjectList: "CSS Selectors",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "CSS Colors",
+        subjectList: "CSS Colors",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "CSS Units",
+        subjectList: "CSS Units",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "What is Javascript?",
+        subjectList: "What is Javascript?",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "Javascript Methods",
+        subjectList: "Javascript Methods",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "Javascript Objects",
+        subjectList: "Javascript Objects",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "Javascript Loops",
+        subjectList: "Javascript Loops",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "What is JQuery?",
+        subjectList: "What is JQuery?",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "JQuery Events",
+        subjectList: "JQuery Events",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "JQuery Syntax",
+        subjectList: "JQuery Syntax",
         createdAt: new Date(),
         updatedAt: new Date()
       },
       {
-        subjectName: "JQuery #ID Selector",
+        subjectList: "JQuery #ID Selector",
         createdAt: new Date(),
         updatedAt: new Date()
       }

@@ -10,7 +10,7 @@
     <h3>Topics</h3>
     <ul id="topic-list" class="list-group">
       {{#each Topics}}
-      <li data-id="{{this.id}}" class="list-group-item">
+      <li data-id={{this.id}} class="list-group-item">
         <a href="topic/{{this.id}}">{{this.topicName}}</a>
         <button class="btn btn-danger float-right delete">ｘ</button>
       </li>

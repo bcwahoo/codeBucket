@@ -11,21 +11,26 @@
 
 <h1 class="text-center">Add to codeBucket</h1>
 
-<form class="clearfix mb-4" action="POST">
+{{#each errors}}
+<div class="error">
+  <p>{{this.text}}</p>
+</div>
+{{/each}}
+<form class="clearfix mb-4" action="/card/add" method="POST">
   <div class="form-group">
     <label for="cb-card-add">Card Name</label>
     <input type="text" id="cb-card-add" class="form-control" aria-describedby="cb-card-add"
-      placeholder="Enter Card Name ">
+      placeholder="Enter Card Name " value={{cardName}}>
   </div>
   <div class="form-group">
     <label for="cb-card-definition">What is the card Definition</label>
     <textarea class="form-control" id="cb-card-definition" aria-describedby="cb-card-definition"
-      placeholder="Enter Card Definition"></textarea>
+      placeholder="Enter Card Definition" value={{definition}}></textarea>
   </div>
   <div class="form-group">
-    <label for="cb-card-example">What is the card Definition</label>
+    <label for="cb-card-example">Please Enter Card Example</label>
     <textarea class="form-control" id="cb-card-example" aria-describedby="cb-card-example"
-      placeholder="Enter Card Example"></textarea>
+      placeholder="Enter Card Example" value={{example}}></textarea>
   </div>
 
   <div class="row">
@@ -33,11 +38,10 @@
       <label for="topic-add">SELECT A TOPIC</label>
 
       {{!-- lines 37 - 40 will be an handlebar each for the vaules pulling from the  TOPIC TABLE --}}
-      <select id="topic-add" class="form-control">
-        <option>HTML</option>
-        <option>CSS</option>
-        <option>JAVASCRIPT</option>
-        <option>jQUERY</option>
+      <select id="topic-add" class="form-control" value={{topicName}}>
+        {{#each Topic}}
+        <option>{{this.topicName}}</option>
+        {{/each}}
       </select>
     </div>
 
@@ -45,17 +49,16 @@
       <label for="topic-add">SELECT A SUBJECT</label>
 
       {{!-- lines 48 - 52 will be an handlebar each for the vaules pulling from the  SUBJECT OF THE MATCHING TOPIC (VALIDATE: TOPIC MUST BE SELECT FIRST) --}}
-      <select id="topic-add" class="form-control">
-        <option>HTML</option>
-        <option>CSS</option>
-        <option>JAVASCRIPT</option>
-        <option>jQUERY</option>
+      <select id="topic-add" class="form-control" value={{subjectName}}>
+        {{#each Subject}}
+        <option>{{this.subjectName}}</option>
+        {{/each}}
       </select>
     </div>
 
   </div>
   <div class="row">
-    <button id="submit" class="btn-lg btn-dark mx-auto">Submit</button>
+    <button id="submit" value="Add Card" class="btn-lg btn-dark mx-auto">Submit</button>
   </div>
 
 </form>
