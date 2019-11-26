@@ -47,35 +47,6 @@ var API = {
   }
 };
 
-// refreshCards gets new cards from the db and repopulates the list
-var refreshCards = function() {
-  API.getCards().then(function(data) {
-    var $cards = data.map(function(card) {
-      var $a = $("<a>")
-        .text(card.cardName)
-        .attr("href", "/card/" + card.id);
-
-      var $li = $("<li>")
-        .attr({
-          class: "list-group-item",
-          "data-id": card.id,
-        })
-        .append($a);
-
-      var $button = $("<button>")
-        .addClass("btn btn-danger float-right delete")
-        .text("ｘ");
-
-      $li.append($button);
-
-      return $li;
-    });
-
-    $cardList.empty();
-    $cardList.append($cards);
-  });
-};
-
 // refreshTopic gets new cards from the db and repopulates the list
 var refreshTopic = function() {
   API.getTopic().then(function(data) {
