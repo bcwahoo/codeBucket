@@ -112,7 +112,7 @@ var handleFormSubmit = function(event) {
 
   var card = {
     cardName: $cardName.val().trim(),
-    definition: $cardDef.val().trim(),
+    cardDef: $cardDef.val().trim(),
     example: $cardExample.val().trim(),
     topic: $cardTopic.val().trim(),
     subject: $cardSubject.val().trim()
@@ -121,7 +121,7 @@ var handleFormSubmit = function(event) {
   if (
     !(
       card.cardName &&
-      card.definition &&
+      card.cardDef &&
       card.example &&
       card.topic &&
       card.subject

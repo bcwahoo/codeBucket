@@ -12,7 +12,7 @@ module.exports = {
     return queryInterface.bulkInsert("Cards", [
       {
         cardName: "What is HTML?",
-        definition: `HTML is the standard markup language for creating Web pages.
+        cardDef: `HTML is the standard markup language for creating Web pages.
 
           HTML stands for Hyper Text Markup Language
           HTML describes the structure of a Web page
@@ -40,7 +40,7 @@ module.exports = {
       },
       {
         cardName: "HTML Elements",
-        definition:
+        cardDef:
           "An HTML element usually consists of a start tag and an end tag, with the content inserted in between",
         example: `<tagname>Content goes here...</tagname>
           The HTML element is everything from the start tag to the end tag:
@@ -52,7 +52,7 @@ module.exports = {
       },
       {
         cardName: "HTML Forms",
-        definition:
+        cardDef:
           "An HTML form contains form elements. Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more.",
         example: `The <input> element is the most important form element.
 
@@ -65,7 +65,7 @@ module.exports = {
       },
       {
         cardName: "HTML Comments",
-        definition:
+        cardDef:
           "Comment tags are used to insert comments in the HTML source code.",
         example: `You can add comments to your HTML source by using the following syntax: 
 

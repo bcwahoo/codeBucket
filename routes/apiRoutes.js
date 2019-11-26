@@ -12,67 +12,72 @@ module.exports = function(app) {
   });
 
   // Add a card
-app.post('/add', (req, res) => {
-  let { cardName, defintion, example, topic, subject } = req.body;
-  let errors = [];
+  app.post("/add", async (req, res) => {
+    try {
+      const { cardName, cardDef, example, topic, subject } = req.body;
+      const errors = [];
 
-  // Validate Fields
-  if(!cardName) {
-    errors.push({ text: 'Please add a cardName' });
-  }
-  if(!defintion) {
-    errors.push({ text: 'Please add some defintion' });
-  }
-  if(!example) {
-    errors.push({ text: 'Please add some defintion' });
-  }
-  if(!topic) {
-    errors.push({ text: 'Please add a topic' });
-  }
-  if(!subject) {
-    errors.push({ text: 'Please add a contact email' });
-  }
+      // Validate Fields
+      if (!cardName) {
+        errors.push({ text: "Please add a cardName" });
+      }
+      if (!cardDef) {
+        errors.push({ text: "Please add some cardDef" });
+      }
+      if (!example) {
+        errors.push({ text: "Please add some cardDef" });
+      }
+      if (!topic) {
+        errors.push({ text: "Please add a topic" });
+      }
+      if (!subject) {
+        errors.push({ text: "Please add a contact email" });
+      }
 
-  // Check for errors
-  if(errors.length > 0) {
-    res.render('add', {
-      errors,
-      cardName, 
-      defintion, 
-      example, 
-      topic, 
-      subject
-    });
-  }
+      // Check for errors
+      if (errors.length > 0) {
+        res.render("add", {
+          errors,
+          cardName,
+          cardDef,
+          example,
+          topic,
+          subject
+        });
+      }
 
       // Insert into Topic table
-      Topic.create({topic})
+      Topic.create({ topic });
 
-          // Insert into Subject table
-    Subject.create({subject})
+      // Insert into Subject table
+      Subject.create({ subject });
 
-    // Insert into Card table
-    Card.create({
-      cardName,
-      defintion,
-      example
-    })
-      .then(card => res.redirect('/'))
-      .catch(err => console.log(err));
-  }
-});
+      // Insert into Card table
+      Card.create({
+        cardName,
+        cardDef,
+        example
+      });
+      res.redirect("/");
+    } catch (error) {
+      res.status(400).json({ error: { name: error.name, msg: error.message } });
+    }
+  });
 
-// Search for card
-router.get('/search', (req, res) => {
-  let { term } = req.query;
+  // Search for card
+  app.get("/search", async (req, res) => {
+    try {
+      const term = await db.Card.findAll(req.body);
 
-  // Make lowercase
-  term = term.toLowerCase();
+      // Make lowercase
+      term = term.toLowerCase();
 
-  Card.findAll({ where: { cardName: { [Op.like]: '%' + term + '%' } } })
-    .then(card => res.render('/card', {cardName}))
-    .catch(err => console.log(err));
-});
+      Card.findAll({ where: { cardName: { [Op.like]: "%" + term + "%" } } });
+      res.render("/card", { cardName });
+    } catch (error) {
+      res.status(400).json({ error: { name: error.name, msg: error.message } });
+    }
+  });
 
   // Create a new topic
   app.post("/api/topics", async (req, res) => {
