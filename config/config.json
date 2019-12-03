@@ -1,10 +1,6 @@
 {
   "development": {
-    "username": "root",
-    "password": "mIamthe076!l",
-    "database": "codebucket",
-    "host": "localhost",
-    "dialect": "mysql"
+    "use_env_variable": "DB_URL"
   },
   "test": {
     "username": "root",
