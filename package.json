@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "seeds": "sequelize-cli db:seed --seed topic-seed.js && sequelize-cli db:seed --seed subject-seed.js && sequelize-cli db:seed --seed card-seed.js",
+    "seeds": "npx sequelize-cli db:seed --seed topic-seed.js && npx sequelize-cli db:seed --seed subject-seed.js && npx sequelize-cli db:seed --seed card-seed.js",
     "lint": "eslint --quiet .",
     "fix": "eslint --fix .",
     "watch": "nodemon server.js",
