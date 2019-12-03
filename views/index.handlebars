@@ -6,15 +6,15 @@
     <!-- Search form -->
     <input class="form-control col-8 mx-auto" type="text" placeholder="Search codeBucket" aria-label="Search">
   </div>
-  <div class="row">
-    <h3>Topics</h3>
-    <ul id="topic-list" class="list-group">
-      {{#each topic}}
-      <li data-id={{this.id}} class="list-group-item">
-        <a href="topic/{{this.id}}">{{this.topicName}}</a>
-      </li>
-      {{/each}}
-    </ul>
+  <h3>Topics</h3>
+  <div class="row justify-content-around">
+    {{#each topic}}
+    <a href="topic/{{this.id}}">
+      <button type="button" class="btn btn-lg btn-deep-purple waves-effect">
+        {{this.topicName}}
+      </button>
+    </a>
+    {{/each}}
   </div>
 
 
