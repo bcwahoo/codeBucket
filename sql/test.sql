@@ -1,5 +1,3 @@
-Use 'codebucket';
-
 SHOW TABLES;
 
 

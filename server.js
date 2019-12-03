@@ -25,7 +25,7 @@ app.set("view engine", "handlebars");
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 // only run when testing server
-var syncOptions = { force: true, pool: true };
+var syncOptions = { force: false, pool: true };
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`

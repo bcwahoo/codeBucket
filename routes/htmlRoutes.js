@@ -78,6 +78,10 @@ module.exports = function(app) {
     res.render("/team", {});
   });
 
+  app.get("/add", function(req, res) {
+    res.render("add", {});
+  });
+
   // _______________________________________________________________________________
 
   // Route to render the add card page
