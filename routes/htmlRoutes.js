@@ -38,7 +38,7 @@ module.exports = function(app) {
       function(dbSubject) {
         //Pulls/Renders object within the subject.handlebars file to display in the browser
 
-        res.render("./layouts/subject", {
+        res.render("subject", {
           subject: dbSubject
         });
       }
@@ -59,7 +59,7 @@ module.exports = function(app) {
         //Renders the function above and passes/prints it through the
         // "card" object (line 65 below) from the card.handlebars file to display in the browser
 
-        res.render("./layouts/card", {
+        res.render("card", {
           card: dbCard
         });
       }
@@ -75,7 +75,7 @@ module.exports = function(app) {
   // Route to render the Team codeBucket page
 
   app.get("/team", function(req, res) {
-    res.render("./layouts/team", {});
+    res.render("/team", {});
   });
 
   // _______________________________________________________________________________

@@ -1,6 +1,8 @@
+Use 'codebucket';
+
 SHOW TABLES;
 
-DESCRIBE `codeBucket`;
+
 
 DESCRIBE `Cards`;
 DESCRIBE `Subjects`;

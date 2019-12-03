@@ -1,0 +1,9 @@
+<h3>Subject</h3>
+<ul id="topic-list" class="list-group">
+  {{#each subject}}
+  <li data-id={{this.id}} class="list-group-item">
+    <a href="/topic/subject/{{this.id}}">{{this.subjectName}}</a>
+  </li>
+  {{/each}}
+</ul>
+</div>

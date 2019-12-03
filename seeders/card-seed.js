@@ -36,7 +36,8 @@ module.exports = {
           </html>`,
 
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        SubjectId: 2
       },
       {
         cardName: "HTML Elements",
@@ -48,7 +49,8 @@ module.exports = {
           <p>My first paragraph.</p>`,
 
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        SubjectId: 2
       },
       {
         cardName: "HTML Forms",
@@ -61,7 +63,8 @@ module.exports = {
           `,
 
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        SubjectId: 3
       },
       {
         cardName: "HTML Comments",
@@ -72,7 +75,8 @@ module.exports = {
           <!-- Write your comments here -->`,
 
         createdAt: new Date(),
-        updatedAt: new Date()
+        updatedAt: new Date(),
+        SubjectId: 4
       }
     ]);
   },
