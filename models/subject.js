@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     // Associating Subject with Posts
     // When an Subject is deleted, also delete any associated Posts
     Subject.hasMany(models.Card, {
-      onDelete: "cascade",
+      onDelete: "cascade"
     });
   };
   Subject.associate = function(models) {

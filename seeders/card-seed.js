@@ -8,7 +8,7 @@
 // Timers - 5
 
 module.exports = {
-  up: (queryInterface, Sequelize) => {{
+  up: (queryInterface, Sequelize) => {
     return queryInterface.bulkInsert("Cards", [
       {
         cardName: "What is HTML?",
@@ -34,7 +34,7 @@ module.exports = {
           
           </body>
           </html>`,
-        SubjectId: 1,
+
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -46,7 +46,7 @@ module.exports = {
           The HTML element is everything from the start tag to the end tag:
           
           <p>My first paragraph.</p>`,
-        SubjectId: 2,
+
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -59,7 +59,7 @@ module.exports = {
           The <input> element can be displayed in several ways, depending on the type attribute. 
           
           `,
-        SubjectId: 3,
+
         createdAt: new Date(),
         updatedAt: new Date()
       },
@@ -70,7 +70,7 @@ module.exports = {
         example: `You can add comments to your HTML source by using the following syntax: 
 
           <!-- Write your comments here -->`,
-        SubjectId: 4,
+
         createdAt: new Date(),
         updatedAt: new Date()
       }
@@ -78,6 +78,6 @@ module.exports = {
   },
 
   down: (queryInterface, Sequelize) => {
-    queryInterface.bulkDelete("Cards", null, {});
+    return queryInterface.bulkDelete("Cards", null, {});
   }
 };

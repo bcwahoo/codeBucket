@@ -9,7 +9,7 @@ module.exports = function(sequelize, DataTypes) {
     // Associating Topic with Posts
     // When an Topic is deleted, also delete any associated Posts
     Topic.hasMany(models.Subject, {
-      onDelete: "cascade",
+      onDelete: "cascade"
     });
   };
   return Topic;

@@ -1,9 +1,9 @@
 {
   "development": {
-    "username": "r8sykkqve944rj2r",
-    "password": "yl9aci3tkqzuxvrs",
-    "database": "kyox0ypw1lf5wyc3",
-    "host": "s9xpbd61ok2i7drv.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "username": "root",
+    "password": "mIamthe076!l",
+    "database": "codebucket",
+    "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
