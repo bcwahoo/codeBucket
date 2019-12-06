@@ -150,6 +150,130 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         SubjectId: 9
+      },
+       {
+        cardName: "What is JavaScript?",
+        cardDef:
+          "JavaScript is the programming language of HTML and the Web.",
+        example: `Web pages are not the only place where JavaScript is used.
+                  Many desktop and server programs use JavaScript. Node.js is the best known. 
+                  Some databases, like MongoDB and CouchDB, also use JavaScript as their programming language.`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 10
+      },
+       {
+        cardName: "JavaScript Methods",
+        cardDef:
+          "JavaScript methods are actions that can be performed on objects.A JavaScript method is a property containing a function definition.",
+        example: `You access an object method with the following syntax:
+                   objectName.methodName()`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 11
+      },
+       {
+        cardName: "JavaScript Objects",
+        cardDef:
+          "Objects in JavaScript are collections of key/value pairs. The values can consist of properties and methods, and may contain all other JavaScript data types, such as strings, numbers, and Booleans. All objects in JavaScript descend from the parent Object constructor. ... This is known as a static method.",
+        example: `You define (and create) a JavaScript object with an object literal:
+                  var person = {firstName:"John", lastName:"Doe", age:50, eyeColor:"blue"};`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 12
+      },
+      {
+        cardName: "JavaScript Loops",
+        cardDef:
+          "Loops are handy, if you want to run the same code over and over again, each time with a different value. Often this is the case when working with arrays.",
+        example: `Instead of writing: 
+                    text += cars[0] + "<br>";
+                    text += cars[1] + "<br>";
+                    text += cars[2] + "<br>";
+                    text += cars[3] + "<br>";
+                    text += cars[4] + "<br>";
+                    text += cars[5] + "<br>";
+
+                  You can write: 
+                    var i;
+                    for (i = 0; i < cars.length; i++) {
+                    text += cars[i] + "<br>";
+                     }, 
+                    `,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 13
+      },
+      {
+        cardName: "JavaScript Arrays",
+        cardDef:
+          "JavaScript arrays are used to store multiple values in a single variable.",
+        example: `var cars = ["Saab", "Volvo", "BMW"];`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 14
+      },
+      {
+        cardName: "JavaScript Strings",
+        cardDef:
+          "A JavaScript string is zero or more characters written inside quotes.",
+        example: `var x = "John Doe";`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 15
+      },
+        {
+        cardName: "JavaScript Data Types",
+        cardDef:
+          "JavaScript variables can hold many data types: numbers, strings, objects and more.",
+        example: `var length = 16;                      // Number
+        var lastName = "Johnson";                      // String
+        var x = {firstName:"John", lastName:"Doe"};    // Object`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 16
+      },
+        {
+        cardName: "JavaScript Scope",
+        cardDef:
+          "In JavaScript there are two types of scope: Local scope & Global scope. JavaScript has function scope: Each function creates a new scope.Scope determines the accessibility (visibility) of these variables. Variables defined inside a function are not accessible (visible) from outside the function.",
+        example: `// code here can NOT use carName
+
+                  function myFunction() {
+                  var carName = "Volvo";
+
+                  // code here CAN use carName }
+                  // ____________________________________________________
+
+                  var carName = "Volvo";
+
+                  // code here can use carName
+
+                  function myFunction() {
+
+                 // code here can also use carName } `,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 17
+      },
+      {
+        cardName: "JavaScript Numbers",
+        cardDef:
+          "JavaScript has only one type of number. Numbers can be written with or without decimals.",
+        example: `var x = 3.14;    // A number with decimals
+                   var y = 3;       // A number without decimals`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 18
       }
     ]);
   },
