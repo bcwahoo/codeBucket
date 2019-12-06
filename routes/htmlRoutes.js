@@ -72,11 +72,15 @@ module.exports = function(app) {
 
   //--------------------------–––––--------------------------------------------------------------
 
-  // Route to render the Team codeBucket page
+  // Route to render the TEAM codeBucket page
 
   app.get("/team", function(req, res) {
     res.render("team", {});
   });
+
+  // _______________________________________________________________________________
+
+  // Route to render the ADD CARD page
 
   app.get("/add", function(req, res) {
     res.render("add", {});
@@ -84,14 +88,15 @@ module.exports = function(app) {
 
   // _______________________________________________________________________________
 
-  // Route to render the add card page
+  // Route to render the cards saved by the user: MY CARD page
 
-  app.get("/insertcard", function(req, res) {
-    res.render("/add", {});
+  app.get("/mycard", function(req, res) {
+    res.render("mycard", {});
   });
 
   // _______________________________________________________________________________
 
+  
   // Render 404 page for any unmatched routes
 
   app.get("*", async (req, res) => {
