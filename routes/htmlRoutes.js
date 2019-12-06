@@ -75,7 +75,7 @@ module.exports = function(app) {
   // Route to render the Team codeBucket page
 
   app.get("/team", function(req, res) {
-    res.render("/team", {});
+    res.render("team", {});
   });
 
   app.get("/add", function(req, res) {
