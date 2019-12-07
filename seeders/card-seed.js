@@ -274,6 +274,121 @@ module.exports = {
         createdAt: new Date(),
         updatedAt: new Date(),
         SubjectId: 18
+      },
+       {
+        cardName: "What is JQuery?",
+        cardDef:
+          "jQuery is a JavaScript Library. jQuery greatly simplifies JavaScript programming.",
+        example: `JQuery Example: 
+                  $(document).ready(function(){
+                  $("p").click(function(){
+                  $(this).hide();
+                      });
+                        });`,
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 19
+      },
+      {
+        cardName: "JQuery Events",
+        cardDef:
+          "All the different visitors' actions that a web page can respond to are called events. An event represents the precise moment when something happens.",
+        example: `JQuery Examples:
+                    moving a mouse over an element
+                    selecting a radio button
+                    clicking on an element`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 20
+      },
+       {
+        cardName: "JQuery Syntax",
+        cardDef:
+          "The jQuery syntax is tailor-made for selecting HTML elements and performing some action on the element(s).",
+        example: `Basic syntax is: $(selector).action()
+                  A $ sign to define/access jQuery
+                  A (selector) to "query (or find)" HTML elements
+                  A jQuery action() to be performed on the element(s)
+                  JQuery Example:
+                  $(this).hide() - hides the current element.`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 21
+      },
+       {
+        cardName: "JQuery #id Selector",
+        cardDef:
+          "The jQuery #id selector uses the id attribute of an HTML tag to find the specific element.",
+        example: `An id should be unique within a page, so you should use the #id selector when you want to find a single, unique element.
+                  To find an element with a specific id, write a hash character, followed by the id of the HTML element: $("#test")
+`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 22
+      },
+      {
+        cardName: "jQuery - AJAX load() Method",
+        cardDef:
+          "The jQuery load() method is a simple, but powerful AJAX method. The load() method loads data from a server and puts the returned data into the selected element.",
+        example: `$(selector).load(URL,data,callback);
+                  $("#div1").load("demo_test.txt");`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 23
+      },
+      {
+        cardName: "JQuery Get",
+        cardDef:
+          "Three simple, but useful, jQuery methods for DOM manipulation are: •text() - Sets or returns the text content of selected elements •html() - Sets or returns the content of selected elements (including HTML markup)•val() - Sets or returns the value of form fields. The following example demonstrates how to get content with the jQuery text() and html() methods.",
+        example: `$("#btn1").click(function(){
+                   alert("Text: " + $("#test").text());
+                    });
+                  $("#btn2").click(function(){
+                 alert("HTML: " + $("#test").html());
+                  });`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 24
+      },
+      {
+        cardName: "jQuery append() Method",
+        cardDef:
+          "The jQuery append() method inserts content AT THE END of the selected HTML elements.",
+        example: `$("p").append("Some appended text.");`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 25
+      },
+      {
+        cardName: "jQuery - AJAX get() and post() Methods",
+        cardDef:
+          "The jQuery get() and post() methods are used to request data from the server with an HTTP GET or POST request.",
+        example: `Syntax: $.get(URL,callback); 
+                          $("button").click(function(){
+                          $.get("demo_test.asp", function(data, status){
+                          alert("Data: " + data + "\nStatus: " + status);
+                           });
+                        });`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 26
+      },
+      {
+        cardName: "jQuery load() Method",
+        cardDef:
+          "The jQuery load() method is a simple, but powerful AJAX method. The load() method loads data from a server and puts the returned data into the selected element.",
+        example: `Syntax: $(selector).load(URL,data,callback);`,
+
+        createdAt: new Date(),
+        updatedAt: new Date(),
+        SubjectId: 27
       }
     ]);
   },
