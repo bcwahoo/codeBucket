@@ -1,0 +1,35 @@
+<nav class="navbar ">
+  <a class="navbar-brand" href="/">
+    <img src="/img/icon.png" width="50px" height="50px" class="d-inline-block align-top text-muted" alt="">
+    codeBucket
+  </a>
+  <form class="form-inline">
+    <input class="form-control mr-sm-2" type="search" placeholder="Search codeBucket" aria-label="Search">
+    <button class="btn btn-outline-dark my-2 my-sm-0" type="submit">Search</button>
+  </form>
+</nav>
+
+<h3>Cards</h3>
+<ul id="topic-list" class="list-group">
+  {{#each card}}
+  <li data-id="{{this.id}}" class="list-group-item">
+    <a href="topic/{{this.id}}">{{this.cardName}}</a>
+    <button class="btn btn-danger float-right delete">ｘ</button>
+  </li>
+  <li data-id="{{this.id}}" class="list-group-item">
+    <p>{{this.id}} • {{this.cardDef}}</p>
+  </li>
+  <li data-id="{{this.id}}" class="list-group-item">
+    <p>
+      <h4>Example:</h4>
+      <pre class="prettyprint"> {{this.example}} </pre>
+    </p>
+  </li>
+  {{/each}}
+</ul>
+</div>
+{{!-- <pre class="prettyprint">
+code here
+</pre> --}}
+
+</div>
