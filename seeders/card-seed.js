@@ -50,9 +50,7 @@ module.exports = {
         cardDef:
           "An HTML form contains form elements. Form elements are different types of input elements, like text fields, checkboxes, radio buttons, submit buttons, and more.",
         example: `The <input> element is the most important form element.
-
           The <input> element can be displayed in several ways, depending on the type attribute. 
-          
           `,
 
         createdAt: new Date(),
