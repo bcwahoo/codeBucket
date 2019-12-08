@@ -39,7 +39,7 @@
 
       {{!-- lines 37 - 40 will be an handlebar each for the vaules pulling from the  TOPIC TABLE --}}
       <select id="topic-add" class="form-control" value={{topicName}}>
-        {{#each Topic}}
+        {{#each topic}}
         <option>{{this.topicName}}</option>
         {{/each}}
       </select>
@@ -50,7 +50,7 @@
 
       {{!-- lines 48 - 52 will be an handlebar each for the vaules pulling from the  SUBJECT OF THE MATCHING TOPIC (VALIDATE: TOPIC MUST BE SELECT FIRST) --}}
       <select id="topic-add" class="form-control" value={{subjectName}}>
-        {{#each Subject}}
+        {{#each subject}}
         <option>{{this.subjectName}}</option>
         {{/each}}
       </select>
