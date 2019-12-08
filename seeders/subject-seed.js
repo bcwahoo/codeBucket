@@ -4,7 +4,7 @@ module.exports = {
   up: queryInterface => {
     return queryInterface.bulkInsert("Subjects", [
       {
-        subjectName: "What is HTML?",
+        subjectName: "HTML Concepts",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 1
@@ -16,88 +16,52 @@ module.exports = {
         TopicId: 1
       },
       {
-        subjectName: "HTML Forms",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        TopicId: 1
-      },
-      {
-        subjectName: "HTML Comments",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        TopicId: 1
-      },
-      {
-        subjectName: "What is CSS?",
+        subjectName: "CSS? Concepts",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 2
       },
       {
-        subjectName: "CSS Selectors",
+        subjectName: "CSS Element",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 2
       },
       {
-        subjectName: "CSS Colors",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        TopicId: 2
-      },
-      {
-        subjectName: "CSS Units",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        TopicId: 2
-      },
-      {
-        subjectName: "What is Javascript?",
+        subjectName: "Javascript Concepts",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 3
       },
       {
-        subjectName: "Javascript Methods",
+        subjectName: "Javascript Elements",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 3
       },
       {
-        subjectName: "Javascript Objects",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        TopicId: 3
-      },
-      {
-        subjectName: "Javascript Loops",
-        createdAt: new Date(),
-        updatedAt: new Date(),
-        TopicId: 3
-      },
-      {
-        subjectName: "What is JQuery?",
+        subjectName: "JQuery Concepts",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 4
       },
       {
-        subjectName: "JQuery Events",
+        subjectName: "JQuery Elements",
         createdAt: new Date(),
         updatedAt: new Date(),
         TopicId: 4
       },
       {
-        subjectName: "JQuery Syntax",
+        subjectName: "Bootstrap 4 Concepts",
         createdAt: new Date(),
         updatedAt: new Date(),
-        TopicId: 4
+        TopicId: 5
       },
       {
-        subjectName: "JQuery #ID Selector",
+        subjectName: "Bootstrap 4 Elements",
         createdAt: new Date(),
         updatedAt: new Date(),
-        TopicId: 4
+        TopicId: 5
       }
     ]);
   },
