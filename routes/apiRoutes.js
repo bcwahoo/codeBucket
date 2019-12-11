@@ -36,7 +36,7 @@ module.exports = function(app) {
 
       // Check for errors
       if (errors.length > 0) {
-        res.render("add", {
+        res.render("/add", {
           errors,
           cardName,
           cardDef,
